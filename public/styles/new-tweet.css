@@ -1,0 +1,29 @@
+.container form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-button {
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  color:#fff
+}
+
+#tweet-text {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid darkgrey;
+  margin-bottom: 1em;
+  outline:none;
+}
+
+.counter {
+  font-family: 'Bungee';
+  color: #000;
+}
