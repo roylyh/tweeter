@@ -21,12 +21,14 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -46,7 +48,7 @@
     </div>
   </nav>
 
-  <header>
+  <header id="header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -67,6 +69,21 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+    </section>
+    <section id="tweets-container">
+      <article class="tweet">
+        <header>
+          <div><img src="https://i.imgur.com/nlhLi3I.png" /><span>Descartess</span></div>
+          <span>@SirIsaa</span>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <footer>
+          <span><strong>10 days ago</strong></span>
+          <div>
+            <i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </section>
   </main>
 </body>
