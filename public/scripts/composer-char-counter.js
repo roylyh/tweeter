@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("document.ready");
   $("#tweet-text").on("input",function() {
     const total = 140;
     const curCount = $(this).val().length;
