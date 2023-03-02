@@ -25,10 +25,7 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -54,14 +51,16 @@
     </div>
     <br>
     <div>
-      <h2>Amy Mansell</h2>
+      <h2 id="username">Amy Mansell</h2>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form action="/tweets/" method="POST">
+      <div id="errmsg1" class="errmsg"><i class="fa-solid fa-triangle-exclamation"></i><span>Can't post empty tweet!</span><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <div id="errmsg2" class="errmsg"><i class="fa-solid fa-triangle-exclamation"></i><span>Your tweet is too long! No more than 140 characters.</span><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <form>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="button-container">
@@ -71,21 +70,15 @@
       </form>
     </section>
     <section id="tweets-container">
-      <article class="tweet">
-        <header>
-          <div><img src="https://i.imgur.com/nlhLi3I.png" /><span>Descartess</span></div>
-          <span>@SirIsaa</span>
-        </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <footer>
-          <span><strong>10 days ago</strong></span>
-          <div>
-            <i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
     </section>
   </main>
-</body>
 
+  <footer>
+    <br><br>
+  </footer>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+</body>
 </html>
