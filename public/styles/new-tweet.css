@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-top: 15px;
+}
+
 .container form {
   display: flex;
   flex-direction: column;
@@ -18,6 +22,7 @@
 #tweet-text {
   background-color: transparent;
   border: none;
+  margin-top: 0.5em;
   border-bottom: 3px solid darkgrey;
   margin-bottom: 1em;
   outline:none;
@@ -30,4 +35,15 @@
 
 .counter.negativeCounter {
   color: #ff0000;
+}
+
+.errmsg {
+  width: 100%;
+  text-align: center;
+  color:red;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 3px solid red;
+  margin-bottom: 10px;
+  display:none;
 }
