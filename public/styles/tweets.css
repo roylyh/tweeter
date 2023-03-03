@@ -1,3 +1,4 @@
+
 .tweet {
   margin: 0 auto;
   border: 3px solid black;
@@ -18,15 +19,11 @@ article.tweet header {
   justify-content: space-between;
   align-items: center;
 }
- 
+
 article.tweet header div {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-article.tweet header div img{
-  /* margin-right: 240px; */
 }
 
 article.tweet p {
@@ -56,4 +53,3 @@ article.tweet footer i {
 article.tweet footer i:hover {
   color: #e9bd1d;
 }
-

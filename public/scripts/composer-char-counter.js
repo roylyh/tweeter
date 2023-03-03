@@ -1,9 +1,9 @@
 $(document).ready(function() {
   $("#tweet-text").on("input",function() {
-    const total = 140;
+
     const curCount = $(this).val().length;
     
-    let remain = total - curCount;
+    let remain = _totalCharacters - curCount;
 
     // output counter
     const $counter = $(this).siblings(".button-container").children(".counter");

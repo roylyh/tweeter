@@ -16,22 +16,19 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* CSS file of container */
-
- .container {
+.container {
   width: 90%;
   margin: auto;
- }
-
- .container>button {
+}
+.container > button {
   position: fixed;
   right: 100px;
   bottom: 100px;
@@ -42,20 +39,18 @@ body {
   color: white;
   background-color: red;
   display: none;
- }
-
- .container>button:hover {
+}
+.container > button:hover {
   cursor: pointer;
- }
+}
 
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   body {
     display: flex;
     justify-content: space-between;
   }
-
   .container {
     width: 60%;
     margin-top: 150px;
   }
- }
+}

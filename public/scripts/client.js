@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const _totalCharacters = 140;
+
 // escape function
 const escape = function(str) {
   let div = document.createElement("div");
@@ -94,6 +96,7 @@ $(".new-tweet form").submit(function(event) {
   }).then(() => {
     // clear the textarea
     $("#tweet-text").val("");
+    $(".counter").text(_totalCharacters);
     loadtweets();
   });
 });

@@ -1,9 +1,9 @@
 /* CSS file of header tag*/
 #header {
-  height: 500px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 500px;
+  width: 100%;
   justify-content: flex-end;
   align-items: center;
   background-color: #eda012;
