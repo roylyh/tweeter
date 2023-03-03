@@ -47,27 +47,26 @@ const renderTweets = function(tweets) {
 // load the data
 const loadtweets = () => {
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: "/tweets",
-  }).then((tweets)=>{
-    // console.log("tweets:", tweets);
+  }).then((tweets) => {
     renderTweets(tweets);
   });
 };
 
 // load the tweets when ready
-$(document).ready(()=>{
+$(document).ready(() => {
   loadtweets();
 });
 
 // listener of form submition
-$('.new-tweet form').submit(function(event) {
+$(".new-tweet form").submit(function(event) {
   // prevent the default behaviour of browser
   event.preventDefault();
 
   // serialize the data
   const urlencoded = $(this).serialize();
-  
+
   // check if the textarea is null or more than 140
   if (urlencoded.slice(5).length === 0) {
     // show the err message
@@ -75,7 +74,7 @@ $('.new-tweet form').submit(function(event) {
     return;
   }
 
-  if (urlencoded.slice(5).replaceAll('%20',' ').length > 140) {
+  if (urlencoded.slice(5).replaceAll("%20", " ").length > 140) {
     // show the err message
     $("#errmsg2").slideDown("slow");
     return;
@@ -87,25 +86,28 @@ $('.new-tweet form').submit(function(event) {
 
   // ajx post request
   $.ajax({
-    method: 'POST',
+    method: "POST",
     url: "/tweets",
-    data:urlencoded,
-  }).then(()=>{
+    data: urlencoded,
+  }).then(() => {
+    // clear the textarea
     $("#tweet-text").val("");
     loadtweets();
   });
 });
 
 // toggle new-tweet section
-$(".nav-click button").on("click",()=>{
-  $(".new-tweet").toggle(1000,()=>{
-    $('#tweet-text').focus();
+$(".nav-click button").on("click", () => {
+  $(".new-tweet").toggle(1000, () => {
+    // hide err msg and focus the textarea
+    $("#errmsg1").hide();
+    $("#errmsg2").hide();
+    $("#tweet-text").focus();
   });
 });
 
 // scroll event - to mentor helper
-$(window).scroll(()=>{
-
+$(window).scroll(() => {
   // get the length of scroll down
   const top = $(this).scrollTop();
 
@@ -113,7 +115,7 @@ $(window).scroll(()=>{
   if (top > 100) {
     $(".nav-click").hide();
     $("#angles-up").show();
-  }  else {
+  } else {
     $(".nav-click").show();
     $("#angles-up").hide();
   }
@@ -121,6 +123,7 @@ $(window).scroll(()=>{
 
 // scroll to the top
 $("#angles-up").on("click", function() {
-  $("html").animate({scrollTop:0}, 500);
+  $("html").animate({ scrollTop: 0 }, 500);
+  // show the textarea
   $(".new-tweet").show();
 });

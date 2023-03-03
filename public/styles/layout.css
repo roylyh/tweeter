@@ -24,16 +24,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* CSS file of container */
 
  .container {
   width: 90%;
   margin: auto;
  }
 
- .container button {
+ .container>button {
   position: fixed;
   right: 100px;
   bottom: 100px;
@@ -46,7 +44,7 @@ body {
   display: none;
  }
 
- .container button:hover {
+ .container>button:hover {
   cursor: pointer;
  }
 

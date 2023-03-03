@@ -11,7 +11,7 @@
 }
 
 article.tweet header {
-  height: 5em;
+  height: 120px;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -23,26 +23,24 @@ article.tweet header div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: space-between; */
-
 }
 
 article.tweet header div img{
-  margin-right: 10px;
+  /* margin-right: 240px; */
 }
 
 article.tweet p {
   border-bottom: 3px solid black;
   overflow-wrap: break-word;
   font-weight: 600;
-  padding-bottom: 1em;
-  margin-bottom: 0.5em;
+  padding-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 article.tweet footer {
   display: flex;
   justify-content: space-between;
-  font-size: 0.7em;
+  font-size: 18px;
 }
 
 article.tweet footer div {
