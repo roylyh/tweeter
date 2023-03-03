@@ -70,12 +70,14 @@ $(".new-tweet form").submit(function(event) {
   // check if the textarea is null or more than 140
   if (urlencoded.slice(5).length === 0) {
     // show the err message
+    $("#errmsg2").hide();
     $("#errmsg1").slideDown("slow");
     return;
   }
 
   if (urlencoded.slice(5).replaceAll("%20", " ").length > 140) {
     // show the err message
+    $("#errmsg1").hide();
     $("#errmsg2").slideDown("slow");
     return;
   }
