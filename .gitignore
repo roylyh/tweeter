@@ -1,3 +1,9 @@
 node_modules/
 .env
 .DS_Store
+server/data-files/initial-tweets.json
+jsconfig.json
+cssbackup/
+sass/rename.sh
+sass/
+.gitignore
