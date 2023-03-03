@@ -5,6 +5,11 @@ Tweeter is a simple, single-page Twitter clone.
 It uses AJAX, jQuery, HTML and CSS. It allows for tweets (no more than 140 characters) to be rendered dynamically with a random avatar and username. It is a responsive design and fits different screen sizes/devices.
 
 ## Final Product
+![desktopversion](docs/desktopversion.PNG)
+![tabletversion](docs/tabletversion.PNG)
+![scroll](docs/scroll1.PNG)
+![error1](docs/Error1.PNG)
+![error2](docs/Error2.PNG)
 
 
 ## Getting Started
