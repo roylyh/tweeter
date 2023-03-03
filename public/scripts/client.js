@@ -95,3 +95,32 @@ $('.new-tweet form').submit(function(event) {
     loadtweets();
   });
 });
+
+// toggle new-tweet section
+$(".nav-click button").on("click",()=>{
+  $(".new-tweet").toggle(1000,()=>{
+    $('#tweet-text').focus();
+  });
+});
+
+// scroll event - to mentor helper
+$(window).scroll(()=>{
+
+  // get the length of scroll down
+  const top = $(this).scrollTop();
+
+  // if length more than 100px show the angles-up hide nav-click
+  if (top > 100) {
+    $(".nav-click").hide();
+    $("#angles-up").show();
+  }  else {
+    $(".nav-click").show();
+    $("#angles-up").hide();
+  }
+});
+
+// scroll to the top
+$("#angles-up").on("click", function() {
+  $("html").animate({scrollTop:0}, 500);
+  $(".new-tweet").show();
+});

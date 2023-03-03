@@ -32,3 +32,32 @@ body {
   width: 90%;
   margin: auto;
  }
+
+ .container button {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  border-radius: 50%;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: red;
+  display: none;
+ }
+
+ .container button:hover {
+  cursor: pointer;
+ }
+
+ @media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 60%;
+    margin-top: 150px;
+  }
+ }
